@@ -34,18 +34,28 @@ body {
 .dots {
     display: grid;
     grid-template: repeat(11, 1fr) / repeat(9, 1fr);
-    width: 450px;
-    height: 500px;
     align-items: center;
     justify-items: center;
+    width: 225px;
+    height: 250px;
+
+    @media (min-width: 768px) {
+        width: 450px;
+        height: 500px;
+    }
 }
 
 .dots__dot {
     background: #fff;
     border-radius: 50%;
     animation: moveUp 1s 2s ease-out forwards; 
-    width: 15px;
-    height: 15px;
+    width: 7.5px;
+    height: 7.5px;
+
+    @media (min-width: 768px) {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 .dots__dot--stable {
