@@ -22,12 +22,12 @@ const dotsOutput = dotsArr.map(dot => {
 		// Bottom triangles
 		(dot.row > 4 && (dot.row - dot.col < 6 && dot.row + dot.col < 16))
 	) {
-		return `<div class="dots__dot dots__dot--stable">${dot.row}, ${dot.col}</div>`;
+		return `<div class="dots__dot dots__dot--stable"></div>`;
 	} else {
 		return `<div class="dots__dot" style="animation-delay: ${1 -
 			Math.abs(dot.row - 5) * 0.1}s; animation-name: ${
 			dot.row > 5 ? 'moveDown' : 'moveUp'
-		}">${dot.row}, ${dot.col}</div>`;
+		}"></div>`;
 	}
 });
 
