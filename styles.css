@@ -1,0 +1,55 @@
+body {
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes moveUp {
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@keyframes moveDown {
+    to {
+        transform: translateY(100px);
+        opacity: 0;
+        pointer-events: none;
+
+    }
+}
+
+@keyframes showDirection {
+    to {
+        transform: translateY(30px);
+    }
+}
+
+.dots {
+    display: grid;
+    grid-template: repeat(11, 1fr) / repeat(9, 1fr);
+    width: 450px;
+    height: 500px;
+    background: #333;
+    align-items: center;
+    justify-items: center;
+}
+
+.dots__dot {
+    background: yellow;
+    border-radius: 50%;
+    animation: moveUp 1s 2s ease-out forwards; 
+    /* width: 15px;
+    height: 15px; */
+}
+
+.dots__dot--stable {
+    background: #fff;
+    animation: showDirection 2s 3s ease-in-out alternate infinite;
+}
